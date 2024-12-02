@@ -16,13 +16,22 @@ a {
   color: inherit;
 }
 
+ul {
+  list-style-type: none;
+}
+
+section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
 /* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  background-color: #34495e;
+  background-color: #2c3e50;
   color: white;
 }
 
@@ -34,11 +43,6 @@ nav .nav-links {
   display: flex;
   gap: 30px;
 }
-
-nav .nav-links{
-  list-style-type: none;
-}
-
 
 nav .nav-links li a {
   color: white;
@@ -53,6 +57,7 @@ nav .nav-links li a:hover {
 #hero {
   background-image: url('1.jpg');
   background-size: cover;
+  background-position: center;
   color: white;
   text-align: center;
   padding: 150px 20px;
@@ -82,22 +87,18 @@ nav .nav-links li a:hover {
 /* Features Section */
 #features {
   display: flex;
-  justify-content: space-between;
-   padding: 60px 0px;
+  justify-content: space-around;
+  padding: 60px 20px;
   background-color: #ecf0f1;
-
-  
-
-  
 }
 
 .feature {
-  padding: 10px;
   text-align: center;
   width: 30%;
-  border-radius: 8px;
+  background-color: #ecf0f1;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  height: 150px
+  height: 200px;
+  border-radius: 10px;
 }
 
 .feature h2 {
@@ -128,6 +129,7 @@ nav .nav-links li a:hover {
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  text-align: center;
 }
 
 .product-image img {
@@ -153,7 +155,6 @@ nav .nav-links li a:hover {
 #contact {
   background-color: #34495e;
   color: white;
-  text-align: center;
   padding: 60px 20px;
 }
 
@@ -166,10 +167,61 @@ nav .nav-links li a:hover {
   font-size: 1.2em;
 }
 
+#contact a {
+  color: #f39c12;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
 /* Footer Section */
 footer {
   background-color: #2c3e50;
   color: white;
   text-align: center;
   padding: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  #features {
+    flex-direction: column;
+  }
+
+  .feature {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  #products .product {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  #hero h1 {
+    font-size: 2.5em;
+  }
+
+  #hero p {
+    font-size: 1.2em;
+  }
+}
+
+@media (max-width: 480px) {
+  nav .nav-links {
+    flex-direction: column;
+  }
+
+  nav .nav-links li {
+    margin: 10px 0;
+  }
+
+  #products .product {
+    width: 100%;
+  }
+
+  .cta-btn {
+    font-size: 1.1em;
+  }
 }
